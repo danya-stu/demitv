@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --index: calc(1vw + 1vh);
+    
+    /* Variables for 3D parallax, updated via JS */
+    --move-x: 0deg;
+    --move-y: 0deg;
+
+    /* Theme colors */
+    --color-rustore: #005BFF;
+    --color-rustore-light: #2B7CFF;
+  }
+
+  body {
+    @apply bg-[#09090B] text-white overflow-x-hidden select-none;
+  }
+
+  /* Hide scrollbar globally */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+  }
+}
+
+/* Enable pointer events on images that are explicitly interactive if needed, but for now we want them static */
+.swiper-slide img {
+  pointer-events: auto;
+}
+
+@media (pointer: fine) {
+  /* Default Cursor: Tech Arrow */
+  body, body * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 2 L12 28 L16.5 17.5 L27 13 L2 2Z' fill='%2300E5FF' stroke='%23001133' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E") 2 2, auto !important;
+  }
+  
+  /* Pressed Cursor ANYWHERE on the screen (Arrow pressed) */
+  body:active, body:active * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg transform='translate(0, 3) scale(0.95)'%3E%3Cpath d='M2 2 L12 28 L16.5 17.5 L27 13 L2 2Z' fill='%23005BFF' stroke='%23001133' stroke-width='2' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E") 2 5, auto !important;
+  }
+  
+  /* Hover Cursor on Interactive: PNG Tech Hand (Blue fill, Cyan glow) */
+  a, a *, button, button *, [role="button"], [role="button"] *, input, textarea, select {
+    cursor: url('/cursor-hand-active-32.png') 15 6, pointer !important;
+  }
+
+  /* Pressed Cursor on Interactive: PNG Tech Hand (Cyan fill, White glow, pressed) */
+  a:active, a:active *, button:active, button:active *, [role="button"]:active, [role="button"]:active *, input:active, textarea:active, select:active {
+    cursor: url('/cursor-hand-32.png') 15 6, pointer !important;
+  }
+
+  /* Swiper Grab (Open Tech Hand) */
+  .swiper, .swiper-wrapper, .swiper * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect x='10' y='14' width='12' height='10' fill='%23005BFF' stroke='%2300E5FF' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='10' y='6' width='3' height='8' fill='%23005BFF' stroke='%2300E5FF' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='14.5' y='4' width='3' height='10' fill='%23005BFF' stroke='%2300E5FF' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='19' y='6' width='3' height='8' fill='%23005BFF' stroke='%2300E5FF' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='5' y='14' width='5' height='3' fill='%23005BFF' stroke='%2300E5FF' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E") 16 16, grab !important;
+  }
+
+  /* Swiper Grabbing (Closed Tech Hand) */
+  body.is-dragging-slider, body.is-dragging-slider *, .swiper:active, .swiper-wrapper:active, .swiper:active *, .swiper-wrapper:active *, .swiper-wrapper[style*="cursor: grabbing"], .swiper-wrapper[style*="cursor: grabbing"] * {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg transform='translate(0, 3)'%3E%3Crect x='10' y='14' width='12' height='10' fill='%2300E5FF' stroke='%23FFFFFF' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='10' y='12' width='3' height='4' fill='%2300E5FF' stroke='%23FFFFFF' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='14.5' y='12' width='3' height='4' fill='%2300E5FF' stroke='%23FFFFFF' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='19' y='12' width='3' height='4' fill='%2300E5FF' stroke='%23FFFFFF' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='7' y='14' width='3' height='3' fill='%2300E5FF' stroke='%23FFFFFF' stroke-width='2' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E") 16 16, grabbing !important;
+  }
+}
+
+@layer utilities {
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 3D Parallax specific classes */
+.layers {
+  perspective: 1000px;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.layers__container {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  transition: transform 1s cubic-bezier(0.05, 0.5, 0, 1);
+  will-change: transform;
+}
+
+.layers__item {
+  position: absolute;
+  inset: -30vw; /* Increased heavily to guarantee no edges show */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layer-1 {
+  transform: translateZ(-155px) scale(1.06);
+}
+
+.layer-2 {
+  transform: translateZ(80px) scale(0.9);
+}
+
+.layer-3 {
+  transform: translateZ(180px) scale(0.85);
+}
+
+.layer-4 {
+  transform: translateZ(300px) scale(0.8);
+}
+
+.layer-5 {
+  transform: translateZ(380px) scale(0.75);
+}
+
+.layer-6 {
+  transform: translateZ(450px) scale(0.7);
+}
+
+/* Fix pointer events for overlaying layers */
+.pointer-events-none {
+  pointer-events: none;
+}
