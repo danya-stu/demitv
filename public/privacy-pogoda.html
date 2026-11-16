@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Политика конфиденциальности и Условия использования — Dёми Погода</title>
+    <meta name="description" content="Политика конфиденциальности, Пользовательское соглашение и правовая информация мобильного приложения «Dёми Погода» (ДемиПогода) в соответствии с 152-ФЗ, 149-ФЗ, 323-ФЗ, 38-ФЗ, ГК РФ и требованиями RuStore.">
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            min-height: 100vh;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 pb-24 flex justify-center selection:bg-sky-500 selection:text-white safe-bottom">
+
+    <div class="max-w-2xl w-full space-y-5">
+        
+        <!-- Шапка -->
+        <header class="flex items-center justify-between border-b border-white/10 pb-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center text-xl shadow-lg shadow-sky-500/20">
+                    🌤️
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-white tracking-tight">Dёми Погода (ДемиПогода)</h1>
+                    <p class="text-xs text-white/50">Политика конфиденциальности и Условия использования</p>
+                </div>
+            </div>
+            <a href="index.html" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-semibold text-white transition active:scale-95">
+                ← В приложение
+            </a>
+        </header>
+
+        <!-- Дата и статус -->
+        <div class="flex flex-wrap items-center justify-between gap-2 text-[11px] text-white/60 bg-sky-500/10 border border-sky-400/20 px-3.5 py-2 rounded-xl">
+            <span>Статус: Действующая редакция (RuStore)</span>
+            <span>Редакция от 12 ноября 2026 г.</span>
+        </div>
+
+        <!-- Основной контент -->
+        <main class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            
+            <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-2">
+                <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                    <span>🛡️</span>
+                    <span>1. Общие положения, акцепт оферты и 152-ФЗ РФ</span>
+                </h2>
+                <p>
+                    Настоящая Политика конфиденциальности и Пользовательское соглашение (далее — «Политика») регулируют порядок использования мобильного приложения <strong>«Dёmi Погода»</strong> (в каталоге Android / RuStore также — <strong>«ДемиПогода»</strong>, пакет <code class="bg-white/10 px-1 py-0.5 rounded text-sky-300">ru.demi.pogoda</code>, далее — «Приложение»), разработанного <strong>Dёmi Software</strong> (далее — «Разработчик»).
+                </p>
+                <p>
+                    В соответствии со статьями 435, 437 и 438 Гражданского кодекса Российской Федерации (ГК РФ) установка, запуск или любое использование Приложения является полным и безоговорочным акцептом (согласием) Пользователя с условиями настоящей Политики. Если Пользователь не согласен с каким-либо положением Политики, он обязан незамедлительно прекратить использование Приложения и удалить его с устройства.
+                </p>
+                <p>
+                    Приложение построено на безсерверной клиентской архитектуре (Serverless / Zero-Cost). Разработчик <strong>не имеет собственных серверов хранения пользовательских баз</strong>, не требует регистрации и не собирает персональные данные, позволяющие прямо идентифицировать личность (ФИО, паспортные данные, номера телефонов, адреса электронной почты, пароли, платёжные реквизиты или список контактов).
+                </p>
+            </section>
+
+            <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-2">
+                <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                    <span>📍</span>
+                    <span>2. Геолокация, аппаратные датчики и локальное хранилище</span>
+                </h2>
+                <p>
+                    <strong>2.1. Доступ к геолокации (GPS / Сеть):</strong> Приложение запрашивает доступ к точным (<code class="bg-white/10 px-1 py-0.5 rounded text-sky-300">ACCESS_FINE_LOCATION</code>) или приблизительным (<code class="bg-white/10 px-1 py-0.5 rounded text-sky-300">ACCESS_COARSE_LOCATION</code>) координатам исключительно по инициативе Пользователя и при наличии системного разрешения ОС Android. Координаты применяются для получения прогноза погоды и центрирования карты радара осадков. Пользователь может в любой момент отозвать разрешение в системных настройках Android и использовать Приложение с ручным поиском города.
+                </p>
+                <p>
+                    <strong>2.2. Встроенный барометр:</strong> При наличии аппаратного датчика атмосферного давления (<code class="bg-white/10 px-1 py-0.5 rounded text-sky-300">Sensor.TYPE_PRESSURE</code>) показания считываются локально исключительно в оперативной памяти устройства во время активной работы на экране и автоматически отключаются при сворачивании Приложения.
+                </p>
+                <p>
+                    <strong>2.3. Локальное хранение:</strong> Избранные города, история поиска, отметки, кэш прогнозов и пользовательские настройки сохраняются только локально в памяти устройства (<code class="bg-white/10 px-1 py-0.5 rounded text-sky-300">localStorage</code> / <code class="bg-white/10 px-1 py-0.5 rounded text-sky-300">SharedPreferences</code>). Пользователь вправе полностью удалить их через «Настройки → Очистить кэш», через настройки приложений Android или путём удаления Приложения.
+                </p>
+                <p>
+                    <strong>2.4. Уведомления:</strong> Разрешение на системные уведомления (<code class="bg-white/10 px-1 py-0.5 rounded text-sky-300">POST_NOTIFICATIONS</code>) используется исключительно для локальных предупреждений об опасных погодных явлениях и может быть отключено в настройках Приложения или ОС Android.
+                </p>
+            </section>
+
+            <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-2">
+                <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                    <span>📊</span>
+                    <span>3. Аналитика и диагностика сбоев (Яндекс AppMetrica SDK)</span>
+                </h2>
+                <p>
+                    Для обеспечения стабильной работы, диагностики технических сбоев (Crash / ANR), оптимизации производительности и анализа востребованности функций в Приложении используется сертифицированный аналитический SDK ООО «Яндекс» — <strong>Yandex AppMetrica SDK</strong> (включая веб-интеграцию в WebView).
+                </p>
+                <p>
+                    В рамках работы AppMetrica могут автоматически передаваться и обрабатываться в обезличенном виде: технические параметры устройства (модель, версия ОС Android, разрешение экрана, наличие датчика давления, режим энергосбережения), отчёты об ошибках и падениях, обезличенные события интерфейса (открытие вкладок, переключение единиц измерения, параметры качества сетевых API), поисковые запросы населённых пунктов, а также округлённые/агрегированные географические координаты (с точностью до города/района) при наличии разрешения.
+                </p>
+                <p>
+                    Обработка этих сведений осуществляется ООО «Яндекс» в соответствии с Условиями использования сервиса AppMetrica (<a href="https://yandex.ru/legal/metrica_termsofuse/" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://yandex.ru/legal/metrica_termsofuse/</a>) и Политикой конфиденциальности Яндекса (<a href="https://yandex.ru/legal/confidential/" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://yandex.ru/legal/confidential/</a>).
+                </p>
+            </section>
+
+            <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-2">
+                <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                    <span>📢</span>
+                    <span>4. Реклама и сторонние сервисы (РСЯ и API)</span>
+                </h2>
+                <p>
+                    <strong>4.1. Рекламная сеть Яндекса (РСЯ):</strong> Для предоставления бесплатного доступа ко всем функциям Приложения интегрирован официальный <strong>Yandex Mobile Ads SDK</strong>. ООО «Яндекс» может обрабатывать обезличенные технические и рекламные идентификаторы устройства (GAID, OAID, AppSetID, IP-адрес, сведения о приложении и показах/кликах) в соответствии с законодательством РФ (включая Федеральный закон № 38-ФЗ «О рекламе» и № 152-ФЗ «О персональных данных») и Политикой конфиденциальности Яндекса: <a href="https://yandex.ru/legal/confidential/" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline hover:text-sky-300">https://yandex.ru/legal/confidential/</a>.
+                </p>
+                <p>
+                    <strong>4.2. Внешние поставщики метеоданных и карт:</strong> Для формирования прогноза, геокодирования, космической погоды и карты радара Приложение обращается по защищённому протоколу <strong>HTTPS</strong> к независимым внешним сервисам: <strong>Open-Meteo</strong>, <strong>MET Norway</strong>, <strong>BigDataCloud</strong>, <strong>RainViewer</strong>, <strong>NOAA SWPC</strong>, <strong>AviationWeather.gov</strong>, <strong>OpenStreetMap</strong>, <strong>Esri</strong>, а при переходе в такси/магазин — к соответствующим внешним приложениям (Яндекс Go / Fasten / RuStore) по инициативе Пользователя. Разработчик не контролирует политику приватности, доступность, задержки и точность данных указанных сторонних ресурсов (в том числе при использовании Пользователем VPN, прокси или блокировщиков).
+                </p>
+            </section>
+
+            <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-2">
+                <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                    <span>⚠️</span>
+                    <span>5. Отказ от ответственности («КАК ЕСТЬ» / AS IS) и 323-ФЗ РФ</span>
+                </h2>
+                <p>
+                    <strong>5.1. Информационно-вероятностный характер:</strong> Все прогнозы погоды, карты осадков, расчёты маршрутов («Погода по маршруту»), индексы («Автопульс», «Индекс рыбака», «Радар цен на такси», «Золотое окно дня»), пользовательские отметки («Народный радар») и локальные штормовые уведомления носят <strong>исключительно справочный, ознакомительный и вероятностный характер</strong>.
+                </p>
+                <p>
+                    <strong>5.2. Медицинский дисклеймер (№ 323-ФЗ «Об основах охраны здоровья граждан в РФ»):</strong> Сведения раздела «Метеопульс / Кабинет здоровья» (атмосферное давление, «барометрическая пила», УФ-индекс, индекс магнитных бурь Kp, аллергены) основаны на математических и физических моделях, не являются медицинской услугой, диагнозом, клиническими рекомендациями или назначением лечения. При плохом самочувствии или обострении заболеваний необходимо обратиться к врачу.
+                </p>
+                <p>
+                    <strong>5.3. Дорожная безопасность и экстренные службы:</strong> Приложение не заменяет Правила дорожного движения, официальные штормовые предупреждения Росгидромета и экстренные оповещения МЧС России. Водитель и любой иной Пользователь обязан самостоятельно оценивать реальную видимость, состояние дорожного покрытия, ледовой обстановки и погодные риски.
+                </p>
+                <p>
+                    <strong>5.4. Ограничение ответственности (ст. 15, 1064 ГК РФ, № 149-ФЗ РФ):</strong> Приложение предоставляется на условиях <strong>«КАК ЕСТЬ» (AS IS)</strong> без каких-либо прямых или подразумеваемых гарантий безошибочности, бесперебойности и пригодности для конкретных целей. Разработчик не несёт ответственности за любой прямой или косвенный ущерб, упущенную выгоду, вред здоровью или имуществу, ДТП, задержки рейсов/поездок, поломки или убытки, возникшие в результате использования или невозможности использования Приложения, неточности метеомоделей либо контента пользовательских отметок.
+                </p>
+            </section>
+
+            <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-2">
+                <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                    <span>⚖️</span>
+                    <span>6. Законодательство РФ, права субъекта и интеллектуальная собственность</span>
+                </h2>
+                <p>
+                    Настоящая Политика составлена в соответствии с Федеральным законом № 152-ФЗ «О персональных данных», № 149-ФЗ «Об информации, информационных технологиях и о защите информации», № 38-ФЗ «О рекламе», № 323-ФЗ, Гражданским кодексом РФ и правилами каталога <strong>RuStore</strong>. Все споры подлежат разрешению в порядке, установленном законодательством Российской Федерации, с обязательным досудебным претензионным порядком (срок рассмотрения претензии — 30 календарных дней).
+                </p>
+                <p>
+                    Исключительные права на дизайн, исходный код, алгоритмы и наименование «Dёми Погода» принадлежат Разработчику (Dёmi Software). Разработчик вправе обновлять настоящую Политику в одностороннем порядке путём публикации новой редакции в Приложении и по месту её размещения.
+                </p>
+            </section>
+
+            <section class="glass-panel rounded-2xl p-4 sm:p-5 space-y-2">
+                <h2 class="text-base font-bold text-white flex items-center space-x-2">
+                    <span>📬</span>
+                    <span>7. Обратная связь, отзыв согласия и контакты</span>
+                </h2>
+                <p>
+                    Пользователь вправе отозвать согласие на обработку данных путём отключения разрешений в настройках Android, очистки кэша Приложения и его удаления с устройства. По любым вопросам, запросам по 152-ФЗ и обращениям правообладателей вы можете связаться с Разработчиком:
+                </p>
+                <ul class="list-disc list-inside space-y-1 text-white/80">
+                    <li>Разработчик: <strong>Dёmi Software</strong></li>
+                    <li>Официальный сайт экосистемы: <a href="https://demitv.ru/" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">https://demitv.ru/</a></li>
+                    <li>Электронная почта: <a href="mailto:demipogoda@gmail.com" class="text-sky-400 underline">demipogoda@gmail.com</a></li>
+                    <li>Официальная страница в RuStore: <a href="https://www.rustore.ru/catalog/app/ru.demi.pogoda" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">RuStore (ru.demi.pogoda)</a></li>
+                    <li>Постоянный URL политики конфиденциальности: <a href="https://demitv.ru/privacy-pogoda" target="_blank" rel="noopener noreferrer" class="text-sky-400 underline">https://demitv.ru/privacy-pogoda</a></li>
+                </ul>
+            </section>
+
+        </main>
+
+        <!-- Футер -->
+        <footer class="pt-4 border-t border-white/10 text-center text-xs text-white/40 space-y-1">
+            <div>© 2026 «Dёми Погода» (Dёmi Software) • Все права защищены</div>
+            <div>Сделано в России с заботой о точности прогноза ❤️</div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
